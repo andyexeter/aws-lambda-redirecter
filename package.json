@@ -1,6 +1,6 @@
 {
   "name": "@destination/aws-lambda-redirecter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Redirecter",
   "description": "",
   "main": "index.js",
