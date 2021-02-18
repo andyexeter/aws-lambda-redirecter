@@ -1,0 +1,23 @@
+{
+  "name": "@destination/aws-lambda-redirecter",
+  "version": "1.0.0",
+  "title": "Redirecter",
+  "description": "",
+  "main": "index.js",
+  "author": "Andy Palmer <andy.palmer@wearedestination.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "ava": "^3.15.0"
+  },
+  "files": [
+    "src/",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearedestination/aws-lambda-redirecter"
+  },
+  "scripts": {
+    "test": "ava"
+  }
+}
