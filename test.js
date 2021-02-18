@@ -55,3 +55,16 @@ test('Return 404', t => {
     t.is(response.body, '404 Not Found');
     t.is(response.statusCode, 404);
 });
+
+test('Normalized URLs', t => {
+    const redirectMap = {
+        '/foo': '/bar'
+    };
+    const redirecter = new Redirecter('https://example.org', redirectMap);
+
+    const response = redirecter.getResponse('foo');
+
+    t.true(response instanceof RedirectResponse);
+    t.is(response.headers.Location, 'https://example.org/bar');
+    t.is(response.statusCode, 301);
+});

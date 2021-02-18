@@ -30,7 +30,12 @@ class Redirecter {
      */
     constructor(redirectDomain, redirectMap, statusCode = 301, notFoundAction = Redirecter.NOTFOUND_REDIRECT_HOME) {
         this.redirectDomain = normalizeUrl(redirectDomain);
-        this.redirectMap = redirectMap;
+
+        this.redirectMap = {};
+        Object.keys(redirectMap).forEach((k) => {
+            this.redirectMap[normalizeUrl(k)] = normalizeUrl(redirectMap[k]);
+        });
+
         this.statusCode = statusCode;
 
         if (![Redirecter.NOTFOUND_REDIRECT_AS_IS, Redirecter.NOTFOUND_REDIRECT_HOME, Redirecter.NOTFOUND_RETURN_404].includes(notFoundAction)) {
