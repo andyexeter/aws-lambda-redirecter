@@ -14,7 +14,7 @@ The default action is to redirect to a matching request URI in the given redirec
 match is found.
 
 ```js
-const Redirecter = require("./src/redirecter");
+const Redirecter = require('@destination/aws-lambda-redirecter');
 
 const redirecter = new Redirecter('https://example.org', {
     'foo': 'bar',
@@ -32,7 +32,7 @@ const response2 = redirecter.getResponse('baz');
 Redirect as-is:
 
 ```js
-const Redirecter = require("./src/redirecter");
+const Redirecter = require('@destination/aws-lambda-redirecter');
 
 const redirecter = new Redirecter('https://example.org', {
     'foo': 'bar',
@@ -45,7 +45,7 @@ const response = redirecter.getResponse('baz');
 Return 404:
 
 ```js
-const Redirecter = require("./src/redirecter");
+const Redirecter = require('@destination/aws-lambda-redirecter');
 
 const redirecter = new Redirecter('https://example.org', {
     'foo': 'bar',
@@ -58,7 +58,7 @@ const response = redirecter.getResponse('baz');
 Change status code:
 
 ```js
-const Redirecter = require("./src/redirecter");
+const Redirecter = require('@destination/aws-lambda-redirecter');
 
 const redirecter = new Redirecter('https://example.org', {
     'foo': 'bar',
