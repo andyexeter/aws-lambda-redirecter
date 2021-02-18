@@ -5,7 +5,7 @@ Used by AWS lambda functions to perform redirects
 ## Installation
 
 ```
-yarn add @destination/redirecter
+yarn add @destination/aws-lambda-redirecter
 ```
 
 ## Usage
